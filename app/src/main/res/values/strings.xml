@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Register</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="birthday">Birthday</string>
+    <string name="select">Select</string>
+    <string name="address">Address</string>
+    <string name="email">Email</string>
+    <string name="terms_of_use">I accept the Terms of Use</string>
+    <string name="register">Register</string>
+</resources>
