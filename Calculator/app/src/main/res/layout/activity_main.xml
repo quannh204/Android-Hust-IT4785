@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#000000" tools:context=".MainActivity">
+    <!--  Status Bar  -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="#000000" android:padding="8dp" android:gravity="center_vertical">
+        <!--  Bên trái để trống hoặc thêm biểu tượng nhà mạng nếu muốn  -->
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="" android:textColor="#FFFFFF" android:textSize="16sp"/>
+        <!--  Biểu tượng Wi-Fi  -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📶" android:textColor="#FFFFFF" android:textSize="16sp" android:layout_marginEnd="8dp"/>
+        <!--  Biểu tượng Pin  -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔋" android:textColor="#FFFFFF" android:textSize="16sp" android:layout_marginEnd="8dp"/>
+        <!--  Giờ  -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="7:00" android:textColor="#FFFFFF" android:textSize="16sp"/>
+    </LinearLayout>
+    <!--  App Header  -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="#424242" android:padding="16dp" android:gravity="center_vertical">
+        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:background="@drawable/ic_launcher_foreground" android:backgroundTint="#FF0000"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LifeCycle" android:textColor="#FFFFFF" android:textSize="20sp" android:textStyle="bold" android:layout_marginStart="12dp"/>
+    </LinearLayout>
+    <!--  Calculator Display  -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="vertical" android:background="#E0E0E0" android:padding="24dp" android:gravity="center_vertical|end">
+        <TextView android:id="@+id/display_expr" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:textColor="#616161" android:textSize="18sp" android:gravity="end"/>
+        <TextView android:id="@+id/display" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="0" android:textColor="#000000" android:textSize="48sp" android:textStyle="bold" android:gravity="end"/>
+    </LinearLayout>
+    <!--  Calculator Buttons  -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:orientation="vertical" android:background="#000000">
+        <!--  Row 1: CE, C, BS, /  -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
+            <Button android:id="@+id/btn_ce" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="CE" android:textColor="#000000" android:textSize="18sp" android:background="@drawable/button_grey_background" android:stateListAnimator="@null"/>
+            <Button android:id="@+id/btn_c" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="C" android:textColor="#000000" android:textSize="18sp" android:background="@drawable/button_grey_background" android:stateListAnimator="@null"/>
+            <Button android:id="@+id/btn_bs" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="BS" android:textColor="#000000" android:textSize="18sp" android:background="@drawable/button_grey_background" android:stateListAnimator="@null"/>
+            <Button android:id="@+id/btn_divide" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="/" android:textColor="#000000" android:textSize="18sp" android:background="@drawable/button_grey_background" android:stateListAnimator="@null"/>
+        </LinearLayout>
+        <!--  Row 2: 7, 8, 9, x  -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
+            <Button android:id="@+id/btn_7" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="7" android:textColor="#000000" android:textSize="24sp" android:background="@drawable/button_white_background" android:stateListAnimator="@null"/>
+            <Button android:id="@+id/btn_8" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="8" android:textColor="#000000" android:textSize="24sp" android:background="@drawable/button_white_background" android:stateListAnimator="@null"/>
+            <Button android:id="@+id/btn_9" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="9" android:textColor="#000000" android:textSize="24sp" android:background="@drawable/button_white_background" android:stateListAnimator="@null"/>
+            <Button android:id="@+id/btn_multiply" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="x" android:textColor="#000000" android:textSize="24sp" android:background="@drawable/button_grey_background" android:stateListAnimator="@null"/>
+        </LinearLayout>
+        <!--  Row 3: 4, 5, 6, -  -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
+            <Button android:id="@+id/btn_4" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="4" android:textColor="#000000" android:textSize="24sp" android:background="@drawable/button_white_background" android:stateListAnimator="@null"/>
+            <Button android:id="@+id/btn_5" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="5" android:textColor="#000000" android:textSize="24sp" android:background="@drawable/button_white_background" android:stateListAnimator="@null"/>
+            <Button android:id="@+id/btn_6" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="6" android:textColor="#000000" android:textSize="24sp" android:background="@drawable/button_white_background" android:stateListAnimator="@null"/>
+            <Button android:id="@+id/btn_subtract" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="-" android:textColor="#000000" android:textSize="24sp" android:background="@drawable/button_grey_background" android:stateListAnimator="@null"/>
+        </LinearLayout>
+        <!--  Row 4: 1, 2, 3, +  -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
+            <Button android:id="@+id/btn_1" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="1" android:textColor="#000000" android:textSize="24sp" android:background="@drawable/button_white_background" android:stateListAnimator="@null"/>
+            <Button android:id="@+id/btn_2" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="2" android:textColor="#000000" android:textSize="24sp" android:background="@drawable/button_white_background" android:stateListAnimator="@null"/>
+            <Button android:id="@+id/btn_3" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="3" android:textColor="#000000" android:textSize="24sp" android:background="@drawable/button_white_background" android:stateListAnimator="@null"/>
+            <Button android:id="@+id/btn_add" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="+" android:textColor="#000000" android:textSize="24sp" android:background="@drawable/button_grey_background" android:stateListAnimator="@null"/>
+        </LinearLayout>
+        <!--  Row 5: +/-, 0, ., =  -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
+            <Button android:id="@+id/btn_sign" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="+/-" android:textColor="#000000" android:textSize="18sp" android:background="@drawable/button_grey_background" android:stateListAnimator="@null"/>
+            <Button android:id="@+id/btn_0" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="0" android:textColor="#000000" android:textSize="24sp" android:background="@drawable/button_white_background" android:stateListAnimator="@null"/>
+            <Button android:id="@+id/btn_decimal" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="." android:textColor="#000000" android:textSize="24sp" android:background="@drawable/button_white_background" android:stateListAnimator="@null"/>
+            <Button android:id="@+id/btn_equals" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_margin="2dp" android:text="=" android:textColor="#000000" android:textSize="24sp" android:background="@drawable/button_grey_background" android:stateListAnimator="@null"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!--  Navigation Bar  -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="#000000" android:padding="12dp" android:gravity="center">
+        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@mipmap/ic_launcher" android:tint="#FFFFFF" android:contentDescription="@string/app_name"/>
+        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@mipmap/ic_launcher" android:tint="#FFFFFF" android:layout_marginHorizontal="40dp" android:contentDescription="@string/app_name"/>
+        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@mipmap/ic_launcher" android:tint="#FFFFFF" android:contentDescription="@string/app_name"/>
+    </LinearLayout>
+</LinearLayout>
