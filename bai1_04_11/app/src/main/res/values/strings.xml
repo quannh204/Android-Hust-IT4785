@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Currency Converter</string>
+    <string-array name="currencies">
+        <item>USD (US Dollar)</item>
+        <item>EUR (Euro)</item>
+        <item>JPY (Japanese Yen)</item>
+        <item>GBP (British Pound)</item>
+        <item>AUD (Australian Dollar)</item>
+        <item>CAD (Canadian Dollar)</item>
+        <item>CHF (Swiss Franc)</item>
+        <item>CNY (Chinese Yuan)</item>
+        <item>SGD (Singapore Dollar)</item>
+        <item>VND (Vietnamese Dong)</item>
+    </string-array>
+</resources>

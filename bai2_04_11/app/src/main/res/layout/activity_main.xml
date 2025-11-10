@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF"
+    tools:context=".MainActivity">
+
+    <!-- EditText nhập số nguyên, dịch xuống dưới để tránh thanh status -->
+    <EditText
+        android:id="@+id/edtNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="40dp"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textSize="24sp"
+        android:padding="4dp"
+        android:backgroundTint="#000000"
+        tools:text="100"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Nhóm 6 radio button: 2 hàng, 3 cột như hình -->
+    <LinearLayout
+        android:id="@+id/layoutRadios"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintTop_toBottomOf="@id/edtNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbOdd"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Số lẻ" />
+
+            <RadioButton
+                android:id="@+id/rbPrime"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Số nguyên tố" />
+
+            <RadioButton
+                android:id="@+id/rbPerfect"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Số hoàn hảo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <RadioButton
+                android:id="@+id/rbEven"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Số chẵn" />
+
+            <RadioButton
+                android:id="@+id/rbSquare"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Số chính phương" />
+
+            <RadioButton
+                android:id="@+id/rbFibo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Số Fibonacci" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ListView hiển thị kết quả -->
+    <ListView
+        android:id="@+id/lvNumbers"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:divider="#00000000"
+        android:dividerHeight="1dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutRadios"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- TextView hiển thị khi không có số thỏa mãn -->
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Không có số nào thỏa mãn"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/lvNumbers"
+        app:layout_constraintBottom_toBottomOf="@id/lvNumbers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
